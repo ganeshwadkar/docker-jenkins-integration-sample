@@ -10,4 +10,8 @@ public class DockerJenkinsIntegrationSampleApplication {
         SpringApplication.run(DockerJenkinsIntegrationSampleApplication.class, args);
     }
 
+    public void hello(){
+        System.out.println("This is hello method");
+    }
+
 }
