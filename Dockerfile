@@ -1,4 +1,4 @@
 FROM eclipse-temurin:17-jdk
 EXPOSE 8080
-ADD target/docker-jenkins-integration-sample-0.1.jar docker-jenkins-integration-sample-0.1.jar
-ENTRYPOINT ["java","-jar","/docker-jenkins-integration-sample-0.1.jar"]
+ADD target/docker-jenkins-integration-sample-0.2.jar docker-jenkins-integration-sample-0.2.jar
+ENTRYPOINT ["java","-jar","/docker-jenkins-integration-sample-0.2.jar"]
