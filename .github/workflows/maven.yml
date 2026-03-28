@@ -40,12 +40,17 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
           push: false
-          image: ganeshwadkar/github-actions
+          image: ganeshwadkar/docker-jenkins-integration-sample
           tags: 2.0
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Deploy to KinD cluster
+          # Use kubectl to apply your Kubernetes manifests
+        run: |
+          kubectl apply -f k8s/deployment.yaml
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #      - name: Update dependency graph
