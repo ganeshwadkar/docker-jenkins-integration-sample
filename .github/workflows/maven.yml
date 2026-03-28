@@ -35,7 +35,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Build Docker image (only) #Build & push Docker image
+      - name: Build Docker image #Build & push Docker image
         #  version 1: Build and push image to docker registry
 #        uses: mr-smithers-excellent/docker-build-push@v5
         # version 2: Build image only (do not push to docker hub)
